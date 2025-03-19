@@ -1,0 +1,30 @@
+digraph G {
+
+  subgraph xcluster_A {
+      A_2024 -> A_2025 -> A_2026 -> A_2027 -> A_2028
+      
+  }
+
+  subgraph xcluster_A_A {
+      A_A_2024 -> A_A_2025 -> A_A_2026 -> A_A_2027 -> A_A_2028
+  }
+  
+  subgraph xcluster_A_A_A {
+      A_A_A_2024 -> A_A_A_2025 -> A_A_A_2026 -> A_A_A_2027 -> A_A_A_2028
+  }
+
+  subgraph xcluster_A_A_B {
+      A_A_B_2025 -> A_A_B_2026 -> A_A_B_2027 -> A_A_B_2028
+  }
+
+  subgraph xcluster_A_A_A_A {
+      A_A_A_A_2024 -> A_A_A_A_2025 -> A_A_A_A_2026 -> A_A_A_A_2027 -> A_A_A_A_2028
+  }
+
+  {edge[dir=none, style=dashed]
+      {rank=same;A_A_2024 -> A_2025}
+      {rank=same;A_A_A_2024 -> A_A_2025}
+      {rank=same;A_A_B_2025 -> A_A_2026}
+      {rank=same;A_A_A_A_2024 -> A_A_A_2025}
+  }
+}
