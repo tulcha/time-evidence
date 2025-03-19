@@ -1,30 +1,84 @@
 digraph G {
 
-  subgraph xcluster_A {
-      A_2024 -> A_2025 -> A_2026 -> A_2027 -> A_2028
+  subgraph cluster_ {
+      _2024 -> _2025 -> _2026 -> _2027 -> _2028 -> _2029 _2028
       
   }
 
-  subgraph xcluster_A_A {
-      A_A_2024 -> A_A_2025 -> A_A_2026 -> A_A_2027 -> A_A_2028
+  subgraph cluster_A {
+      A_2024 -> A_2025 -> A_2026 -> A_2027 -> A_2028 -> A_2029
   }
   
-  subgraph xcluster_A_A_A {
-      A_A_A_2024 -> A_A_A_2025 -> A_A_A_2026 -> A_A_A_2027 -> A_A_A_2028
+  subgraph cluster_B {
+      B_2025 -> B_2026 -> B_2027 -> B_2028 -> B_2029
   }
 
-  subgraph xcluster_A_A_B {
-      A_A_B_2025 -> A_A_B_2026 -> A_A_B_2027 -> A_A_B_2028
+
+  subgraph cluster_AA {
+      AA_2024 -> AA_2025 -> AA_2026 -> AA_2027 -> AA_2028 -> AA_2029
   }
 
-  subgraph xcluster_A_A_A_A {
-      A_A_A_A_2024 -> A_A_A_A_2025 -> A_A_A_A_2026 -> A_A_A_A_2027 -> A_A_A_A_2028
+  subgraph cluster_AB {
+      AB_2025 -> AB_2026 -> AB_2027 -> AB_2028 -> AB_2029
   }
 
-  {edge[dir=none, style=dashed]
-      {rank=same;A_A_2024 -> A_2025}
-      {rank=same;A_A_A_2024 -> A_A_2025}
-      {rank=same;A_A_B_2025 -> A_A_2026}
-      {rank=same;A_A_A_A_2024 -> A_A_A_2025}
+  subgraph cluster_BA {
+      BA_2025 -> BA_2026 -> BA_2027 -> BA_2028 -> BA_2029
   }
+
+  subgraph cluster_BB {
+      BB_2025 -> BB_2026 -> BB_2027 -> BB_2028 -> BB_2029
+  }
+
+
+  subgraph cluster_AAA {
+      AAA_2024 -> AAA_2025 -> AAA_2026 -> AAA_2027 -> AAA_2028 -> AAA_2029
+  }
+
+  subgraph cluster_AAB {
+      AAB_2025 -> AAB_2026 -> AAB_2027 -> AAB_2028 -> AAB_2029
+  }
+
+  subgraph cluster_ABA {
+      ABA_2024 -> ABA_2025 -> ABA_2026 -> ABA_2027 -> ABA_2028 -> ABA_2029
+  }
+
+  subgraph cluster_ABB {
+      ABB_2025 -> ABB_2026 -> ABB_2027 -> ABB_2028 -> ABB_2029
+  }
+
+  subgraph cluster_BAA {
+      BAA_2025 -> BAA_2026 -> BAA_2027 -> BAA_2028 -> BAA_2029
+  }
+
+  subgraph cluster_BAB {
+      BAB_2026 -> BAB_2027 -> BAB_2028 -> BAB_2029
+  }
+
+  subgraph cluster_BBA {
+      BBA_2026 -> BBA_2027 -> BBA_2028 -> BBA_2029
+  }
+
+  subgraph cluster_BBB {
+      BBB_2027 -> BBB_2028 -> BBB_2029
+  }
+
+  {edge[dir=none, style=dashed, color=red]
+                             {A_2024 -> _2025}
+                  {AA_2024 -> A_2025}
+      {AAA_2024 -> AA_2025}
+      {AAB_2025 -> AA_2026}
+                  {AB_2025 -> A_2026}
+      {ABA_2024 -> AB_2026}
+      {ABB_2025 -> AB_2027}
+                             {B_2025 -> _2026}
+                  {BA_2025 -> B_2026}
+      {BAA_2025 -> BA_2026}
+      {BAB_2026 -> BA_2027}
+                  {BB_2026 -> B_2027}
+      {BBA_2026 -> BB_2027}
+      {BBB_2027 -> BB_2028}
+  }
+
+  rankdir=LR
 }
